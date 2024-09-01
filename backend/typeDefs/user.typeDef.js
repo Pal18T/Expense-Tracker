@@ -7,10 +7,10 @@ type User {
     password: String!
     profilePicture: String
     gender: String!
+    transactions: [Transaction!]
 }
 
 type Query {
-   users: [User!]
    authUser: User
    user(userId:ID): User
 
@@ -38,4 +38,4 @@ type LogoutResponse {
 }
 `;
 
-export default userTypeDef
+export default userTypeDef;
